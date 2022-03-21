@@ -1,0 +1,11 @@
+{% extends "listings/base.html" %}
+
+{% block content %}
+    <h1>Liste des titres!</h1>
+    <p>Ma liste:</p>
+    <ul>
+        {% for element in listings %}
+            <li><a href="{% url 'listing-detail' element.id %}">{{ element.title }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
