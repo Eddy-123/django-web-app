@@ -2,6 +2,7 @@
 
 {% block content %}
     <h1>Liste des titres!</h1>
+    <p><a href="{% url 'listing-create' %}">Creer un article</a></p>
     <p>Ma liste:</p>
     <ul>
         {% for element in listings %}
