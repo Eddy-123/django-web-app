@@ -6,7 +6,11 @@
     <p>Ma liste:</p>
     <ul>
         {% for element in listings %}
-            <li><a href="{% url 'listing-detail' element.id %}">{{ element.title }}</a></li>
+            <li>
+                <a href="{% url 'listing-detail' element.id %}">{{ element.title }}</a>
+                 - <a href="{% url 'listing-update' element.id %}">Modifier l'annonce</a>
+                 - <a href="{% url 'listing-delete' element.id %}">Supprimer l'annonce</a>
+            </li>
         {% endfor %}
     </ul>
 {% endblock content %}

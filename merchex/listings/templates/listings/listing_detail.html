@@ -8,7 +8,9 @@
         <li> {{ listing.year }} </li>
         <li> {{ listing.get_type_display }} </li>
         {% if listing.band %}
-            <li> {{ listing.get_band_display }} </li>
+            <li> {{ listing.band.name }} </li>
         {% endif %}
     </ul>
+    <p><a href="{% url 'listing-update' listing.id %}">Modifier l'annonce</a></p>
+    <p><a href="{% url 'listing-delete' listing.id %}">Supprimer l'annonce</a></p>
 {% endblock %}
